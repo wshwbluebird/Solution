@@ -3,5 +3,5 @@ project(Solution)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp Divide.cpp leastDoubleBasePalindrom.cpp permutation_my.cpp opermutation_standard.cpp STL_nextPermutation.cpp subset.cpp eightQueen.cpp primeCycle.cpp)
+set(SOURCE_FILES main.cpp Divide.cpp leastDoubleBasePalindrom.cpp permutation_my.cpp opermutation_standard.cpp STL_nextPermutation.cpp subset.cpp eightQueen.cpp primeCycle.cpp difficultString.cpp threeWaterCup.cpp)
 add_executable(Solution ${SOURCE_FILES})
