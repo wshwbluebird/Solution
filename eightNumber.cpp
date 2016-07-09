@@ -4,6 +4,8 @@
 //typedef memcmp memcpy memcmp
 #include <iostream>
 #include <String.h>
+#include <set>
+
 using namespace std;
 typedef int State[9];//定义状态的类型
 const int MAXSTATE = 1000000;
@@ -83,7 +85,19 @@ int bfs(){
     return  0; //如果 失败  返回0;
 }
 
-
+//****************************8****************************8****************************8
+//use set
+set<int> vis;
+void init_table(){vis.clear();}
+int try_to_insert_set(int po){
+    int v =0;
+    for (int i = 0; i < 9 ; ++i) {
+        v = v * 10 + st[po][i];   //将一个state类型的 需要存储的 映射到 以俄国唯一的整数
+    }
+    if(vis.count(v)) return 0; //检查集合中 是否存在这个 映射后的整数,若存在 则说明这个状态已经搜素过了
+    vis.insert(v);  //插入
+    return 1;
+}
 
 int main(){
 
